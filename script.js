@@ -33,8 +33,12 @@ function showBooks() {
   ul.innerHTML = "";
   for (let i = 0; i < myLibrary.length; i++) {
     let li = document.createElement("li");
+    let deleteBtn = document.createElement("button");
     item = document.createTextNode(myLibrary[i].info());
     li.appendChild(item);
+    deleteBtn.textContent = "delete";
+    deleteBtn.classList.add("deleteBtn");
+    li.appendChild(deleteBtn);
     ul.appendChild(li);
   }
 }

@@ -97,6 +97,23 @@ label {
   scale: 1.6;
 }
 
+.deleteBtn {
+  display: inline;
+
+  font-size: 2rem;
+  color: var(--primary-dark);
+  border: 1px solid var(--primary-dark);
+  background-color: transparent;
+  margin: 0;
+  width: 7rem;
+  transition: all 0.3s;
+}
+
+.deleteBtn:hover {
+  color: darken(var(--primary-dark));
+  scale: 1.1;
+}
+
 .btn {
   width: 20rem;
   height: 7rem;
