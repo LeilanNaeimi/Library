@@ -13,7 +13,37 @@
       <ul class="items"></ul>
 
       <div class="newBook">
-        <button class="btn">NEW BOOK</button>
+        <!-- A modal dialog containing a form -->
+        <dialog id="favDialog">
+          <form>
+            <p>
+              <label>
+                Book Ctegory:
+                <select>
+                  <option value="default">Choose…</option>
+                  <option>Romance</option>
+                  <option>Action</option>
+                  <option>Drama</option>
+                  <option>Horror</option>
+                </select>
+              </label>
+              <input type="text" id="bookTitle" />
+              <label for="bookTitle">Book title:</label>
+            </p>
+            <div>
+              <button class="btnDialog" value="cancel" formmethod="dialog">
+                Cancel
+              </button>
+              <button class="btnDialog" id="confirmBtn" value="default">
+                Confirm
+              </button>
+            </div>
+          </form>
+        </dialog>
+        <p>
+          <button id="showDialog" class="btn">NEW BOOK</button>
+        </p>
+        <output></output>
       </div>
     </div>
 

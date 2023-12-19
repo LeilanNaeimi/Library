@@ -2,8 +2,11 @@
   --primary-light: #fce7f2;
   --primary-dark: #5e6073;
   --secondry-light: #fff7d4;
-  --blu: #d3e8f7;
-  --yelo: #fce5a8;
+  --secondry-dark: #000000;
+  --blu: #d2e0fb;
+  --dark-blu: #8eaccd;
+  --yelo: #f2f4d1;
+  --gren: #d7e5ca;
 }
 
 *,
@@ -77,6 +80,101 @@ body {
   background-color: darken(var(--yelo));
   border: 1px solid var(--primary-dark);
   scale: 1.1;
+}
+
+/* Dialog Box */
+dialog {
+  animation: fade-out 0.7s ease-out;
+  width: 80rem;
+  height: 50rem;
+  margin: 3rem;
+  padding: 1rem;
+  border: 1px solid var(--primary-light);
+  border-radius: 10px;
+}
+
+dialog[open] {
+  animation: fade-in 0.7s ease-out;
+}
+
+dialog[open]::backdrop {
+  animation: backdrop-fade-in 0.7s ease-out forwards;
+}
+
+p,
+select,
+output {
+  font-size: 2rem;
+  color: var(--primary-dark);
+}
+
+.btnDialog {
+  width: 20rem;
+  height: 7rem;
+  border-radius: 3rem;
+  font-size: 2rem;
+  color: var(--yelo);
+  background-color: var(--primary-dark);
+  margin: 5rem;
+  border: 1px solid var(--primary-light);
+  transition: all 0.3s;
+}
+
+.btnDialog:hover {
+  color: var(--primary-dark);
+  background-color: var(--yelo);
+  border: 1px solid var(--primary-dark);
+  scale: 1.1;
+}
+
+/* Animation keyframes */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+    display: none;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+    display: block;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: scaleY(1);
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleY(0);
+    display: none;
+  }
+}
+
+@keyframes backdrop-fade-in {
+  0% {
+    background-color: rgb(0 0 0 / 0);
+  }
+
+  100% {
+    background-color: rgb(0 0 0 / 0.25);
+  }
+}
+
+body,
+button {
+  font-family: system-ui;
+}
+
+::backdrop {
+  background-image: linear-gradient(transparent, var(--secondry-dark));
+  opacity: 2;
 }
 
 /* FOOTER */
