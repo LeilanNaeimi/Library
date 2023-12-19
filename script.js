@@ -3,30 +3,31 @@ let card = document.querySelector(".card");
 let ul = document.querySelector("ul");
 let item = "";
 
-const myLibrary = [
-  {
-    title: "Book 1",
-    author: "Author 1",
-    pages: 100,
-    read: "Y",
-    info: function () {
-      return `${this.title} by ${this.author}, ${this.pages} pages, ${
-        this.read === "Y" ? `I read it before` : `I haven't read it yet`
-      }`;
-    },
-  },
-  {
-    title: "Book 2",
-    author: "Author 2",
-    pages: 512,
-    read: "N",
-    info: function () {
-      return `${this.title} by ${this.author}, ${this.pages} pages, ${
-        this.read === "Y" ? `I read it before` : `I haven't read it yet`
-      }`;
-    },
-  },
-];
+let myLibrary = [];
+// const myLibrary = [
+//   {
+//     title: "Book 1",
+//     author: "Author 1",
+//     pages: 100,
+//     read: "Y",
+//     info: function () {
+//       return `${this.title} by ${this.author}, ${this.pages} pages, ${
+//         this.read === "Y" ? `I read it before` : `I haven't read it yet`
+//       }`;
+//     },
+//   },
+//   {
+//     title: "Book 2",
+//     author: "Author 2",
+//     pages: 512,
+//     read: "N",
+//     info: function () {
+//       return `${this.title} by ${this.author}, ${this.pages} pages, ${
+//         this.read === "Y" ? `I read it before` : `I haven't read it yet`
+//       }`;
+//     },
+//   },
+// ];
 
 function showBooks() {
   ul.innerHTML = "";
