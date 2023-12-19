@@ -8,10 +8,14 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="card">
+    <div class="bookList">
       <p class="text">Library</p>
+      <div class="addtolib">
+        <button class="btnAdd" id="openDialogBox" title="Add New Books">
+          +
+        </button>
+      </div>
       <ul class="items"></ul>
-
       <div class="newBook">
         <dialog id="userDialog">
           <form method="dialog">
@@ -48,17 +52,15 @@
                 />
               </label>
             </p>
-            <button class="btn" onclick="closeDialog()">Cancel</button>
-            <button class="btn" id="confirmBtn" type="button">Confirm</button>
+            <button class="btnDialog" onclick="closeDialog()">Cancel</button>
+            <button class="btnDialog" id="confirmBtn" type="button">
+              Confirm
+            </button>
           </form>
         </dialog>
-        <div class="output">
+        <!-- <div class="output">
           <button class="btn addtolib hidden">Add to Library</button>
-        </div>
-
-        <p>
-          <button class="btn" id="openDialogBox">NEW BOOK</button>
-        </p>
+        </div> -->
       </div>
     </div>
 
