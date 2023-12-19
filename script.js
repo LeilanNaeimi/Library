@@ -40,6 +40,12 @@ function showBooks() {
     deleteBtn.classList.add("deleteBtn");
     li.appendChild(deleteBtn);
     ul.appendChild(li);
+    //*** delete Book ****/
+    deleteBtn.addEventListener("click", () => {
+      myLibrary.pop(i);
+      showBooks();
+      console.log("delete");
+    });
   }
 }
 

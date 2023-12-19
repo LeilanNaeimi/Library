@@ -83,6 +83,10 @@ label {
   align-items: center;
 }
 
+li :last-child {
+  margin-left: 5rem;
+}
+
 .btnAdd {
   font-size: 5rem;
   color: var(--primary-dark);
@@ -107,6 +111,7 @@ label {
   margin: 0;
   width: 7rem;
   transition: all 0.3s;
+  padding: 5px 10px;
 }
 
 .deleteBtn:hover {
