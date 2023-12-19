@@ -1,7 +1,7 @@
 const myLibrary = [
   {
-    title: "The hobbit",
-    author: "J.K.Rolling",
+    title: "Book 1",
+    author: "Authour 1",
     pages: 100,
     read: "Y",
     info: function () {
@@ -12,10 +12,10 @@ const myLibrary = [
     },
   },
   {
-    title: "book2",
-    author: "author2",
+    title: "Book 2",
+    author: "Authour 2",
     pages: 512,
-    read: "Y",
+    read: "N",
     info: function () {
       return `${this.title} by ${this.author},${this.pages} pages,
         ${

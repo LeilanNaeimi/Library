@@ -54,8 +54,32 @@ body {
   text-align: center;
   font-size: 3rem;
 }
-/* FOOTER */
 
+.newBook {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: 20rem;
+  height: 7rem;
+  border-radius: 3rem;
+  font-size: 2rem;
+  color: var(--primary-dark);
+  background-color: var(--yelo);
+  margin: 5rem;
+  border: 1px solid var(--primary-light);
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  color: var(--primary-dark);
+  background-color: darken(var(--yelo));
+  border: 1px solid var(--primary-dark);
+  scale: 1.1;
+}
+
+/* FOOTER */
 .footer {
   bottom: 0;
   left: 0;
