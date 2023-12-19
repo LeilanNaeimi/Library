@@ -58,9 +58,27 @@ body {
   font-size: 3rem;
 }
 
+#bookTitle,
+#author,
+#pages {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
 .newBook {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.output {
+  background-color: var(--dark-blu);
+  height: 3rem;
+}
+
+.addtolib {
+  border: 1px solid var(--primary-light);
 }
 
 .btn {
@@ -198,4 +216,8 @@ button {
 
 .github:hover {
   transform: rotate(360deg) scale(1.2);
+}
+
+.hidden {
+  opacity: 0;
 }

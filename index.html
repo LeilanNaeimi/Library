@@ -13,37 +13,52 @@
       <ul class="items"></ul>
 
       <div class="newBook">
-        <!-- A modal dialog containing a form -->
-        <dialog id="favDialog">
-          <form>
+        <dialog id="userDialog">
+          <form method="dialog">
             <p>
               <label>
-                Book Ctegory:
-                <select>
-                  <option value="default">Choose…</option>
-                  <option>Romance</option>
-                  <option>Action</option>
-                  <option>Drama</option>
-                  <option>Horror</option>
-                </select>
+                Book title:
+                <input
+                  type="text"
+                  name="book Title"
+                  id="bookTitle"
+                  placeholder="Enter Book Title"
+                />
               </label>
-              <input type="text" id="bookTitle" />
-              <label for="bookTitle">Book title:</label>
             </p>
-            <div>
-              <button class="btnDialog" value="cancel" formmethod="dialog">
-                Cancel
-              </button>
-              <button class="btnDialog" id="confirmBtn" value="default">
-                Confirm
-              </button>
-            </div>
+            <p>
+              <label>
+                Author:
+                <input
+                  type="text"
+                  name="author"
+                  id="author"
+                  placeholder="Enter author"
+                />
+              </label>
+            </p>
+            <p>
+              <label>
+                Pages:
+                <input
+                  type="number"
+                  name="pages"
+                  id="pages"
+                  placeholder="Enter Book pages"
+                />
+              </label>
+            </p>
+            <button class="btn" onclick="closeDialog()">Cancel</button>
+            <button class="btn" id="confirmBtn" type="button">Confirm</button>
           </form>
         </dialog>
+        <div class="output">
+          <button class="btn addtolib hidden">Add to Library</button>
+        </div>
+
         <p>
-          <button id="showDialog" class="btn">NEW BOOK</button>
+          <button class="btn" id="openDialogBox">NEW BOOK</button>
         </p>
-        <output></output>
       </div>
     </div>
 
