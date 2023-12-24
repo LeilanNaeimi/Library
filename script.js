@@ -29,52 +29,29 @@ function showBooks() {
 // showBooks();
 
 // Add a click event listener to the "Open Dialog Box" button
-openDialogBox.addEventListener("click", function () {
-  let userDialog = document.getElementById("userDialog");
-  let confirmBtn = document.getElementById("confirmBtn");
-
-  // Reset input fields to empty
-  document.getElementById("bookTitle").value = "";
-  document.getElementById("author").value = "";
-  document.getElementById("pages").value = "";
-
-  // Define the modalOpen function
-  function modalOpen() {
-    userDialog.showModal();
-  }
-
+openDialogBox.addEventListener("click", function displayValues() {
   // Add a click event listener to the "Confirm" button
-  confirmBtn.addEventListener("click", function displayValues() {
-    let bookTitleValue = document.getElementById("bookTitle").value;
-    let authorValue = document.getElementById("author").value;
-    let pagesValue = document.getElementById("pages").value;
 
-    // Create a new book object
-    const newBook = {
-      title: bookTitleValue,
-      author: authorValue,
-      pages: pagesValue,
-      read: "N",
-      info: function () {
-        return `${this.title} by ${this.author}, ${this.pages} pages, ${
-          this.read === "Y" ? `I read it before` : `I haven't read it yet`
-        }`;
-      },
-    };
+  let bookTitleValue = document.getElementById("bookTitle").value;
+  let authorValue = document.getElementById("author").value;
+  let pagesValue = document.getElementById("pages").value;
 
-    // Add the new book to the library
-    myLibrary.push(newBook);
+  // Create a new book object
+  const newBook = {
+    title: bookTitleValue,
+    author: authorValue,
+    pages: pagesValue,
+    read: "N",
+    info: function () {
+      return `${this.title} by ${this.author}, ${this.pages} pages, ${
+        this.read === "Y" ? `I read it before` : `I haven't read it yet`
+      }`;
+    },
+  };
 
-    // Update the display
-    showBooks();
-    closeDialog();
-  });
+  // Add the new book to the library
+  myLibrary.push(newBook);
 
-  // Close the dialog
-  function closeDialog() {
-    userDialog.close();
-  }
-
-  // Show the modal dialog
-  modalOpen();
+  // Update the display
+  showBooks();
 });
