@@ -41,14 +41,28 @@ label {
   margin-top: 2rem;
 }
 
+.text {
+  text-align: center;
+  justify-content: center;
+  margin-top: 1rem;
+  background-color: var(--blu);
+  color: var(--primary-dark);
+  width: 70vw;
+  height: 5rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0.5rem 0.5rem 7px var(--primary-dark);
+  line-height: 5rem;
+}
+
 .bookList {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: var(--blu);
   color: var(--primary-dark);
   width: 70vw;
   height: 90vh;
-  margin: 5rem;
+  margin: 2rem;
   padding: 2rem;
   border: none;
   border-radius: 10px;
@@ -57,16 +71,12 @@ label {
 }
 
 .items {
-  margin-top: 1rem;
+  margin: 2rem;
   padding: 2rem;
   background-color: var(--yelo);
   border: none;
   border-radius: 10px;
-}
-
-.text {
-  text-align: center;
-  font-size: 3rem;
+  width: 80%;
 }
 
 #bookTitle,
@@ -103,7 +113,6 @@ li :last-child {
 
 .deleteBtn {
   display: inline;
-
   font-size: 2rem;
   color: var(--primary-dark);
   border: 1px solid var(--primary-dark);
